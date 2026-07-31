@@ -1,0 +1,46 @@
+{
+  "$schema": "https://tauri.app/schema.json",
+  "productName": "CineVault",
+  "version": "0.0.0",
+  "identifier": "com.movieplayer.cinevault",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devUrl": "http://127.0.0.1:1420",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "CineVault",
+        "width": 1200,
+        "height": 800,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": null,
+      "assetProtocol": {
+        "enable": true,
+        "scope": [
+          "$DATA/movieplayer/cinevault/**",
+          "$APPDATA/movieplayer/cinevault/**",
+          "$APPDATA/**/movieplayer/cinevault/**",
+          "$APPLOCALDATA/movieplayer/cinevault/**"
+        ]
+      }
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "nsis": {
+        "installerIcon": "icons/icon.ico"
+      }
+    }
+  }
+}

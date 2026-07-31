@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 160 15% 5%;
+    --foreground: 150 10% 90%;
+
+    --card: 160 12% 9%;
+    --card-foreground: 150 10% 90%;
+
+    --popover: 160 12% 11%;
+    --popover-foreground: 150 10% 90%;
+
+    --primary: 152 70% 45%;
+    --primary-foreground: 160 15% 5%;
+
+    --secondary: 160 10% 14%;
+    --secondary-foreground: 150 10% 80%;
+
+    --muted: 160 8% 12%;
+    --muted-foreground: 160 5% 50%;
+
+    --accent: 152 55% 38%;
+    --accent-foreground: 150 10% 95%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 8% 16%;
+    --input: 160 8% 16%;
+    --ring: 152 70% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 160 12% 7%;
+    --sidebar-foreground: 150 10% 85%;
+    --sidebar-primary: 152 70% 45%;
+    --sidebar-primary-foreground: 160 15% 5%;
+    --sidebar-accent: 160 10% 13%;
+    --sidebar-accent-foreground: 150 10% 85%;
+    --sidebar-border: 160 8% 14%;
+    --sidebar-ring: 152 70% 45%;
+
+    --success: 152 70% 45%;
+    --warning: 45 90% 55%;
+    --adult: 0 72% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html.cinevault-player-transparent,
+  body.cinevault-player-transparent {
+    /*
+      Prevent the compositor/webview default (white) from showing while keeping mpv visible
+      behind transparent regions.
+    */
+    background: rgba(0, 0, 0, 0.01) !important;
+  }
+
+  body.cinevault-player-transparent #root {
+    background: transparent !important;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border/50;
+  }
+  .gradient-green {
+    background: linear-gradient(135deg, hsl(152 70% 45%), hsl(162 65% 35%));
+  }
+  .text-gradient-green {
+    background: linear-gradient(135deg, hsl(152 70% 45%), hsl(142 70% 55%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

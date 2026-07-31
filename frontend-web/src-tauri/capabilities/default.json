@@ -1,0 +1,21 @@
+{
+  "identifier": "default",
+  "description": "Default capabilities for CineVault windows.",
+  "windows": ["main", "player"],
+  "permissions": [
+    "core:default",
+    "core:webview:allow-create-webview-window",
+    "core:webview:allow-set-webview-background-color",
+    "core:window:allow-close",
+    "core:window:allow-create",
+    "core:window:allow-destroy",
+    "core:window:allow-hide",
+    "core:window:allow-set-background-color",
+    "core:window:allow-set-focus",
+    "core:window:allow-set-fullscreen",
+    "core:window:allow-set-icon",
+    "core:window:allow-show",
+    "dialog:default",
+    "dialog:allow-open"
+  ]
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Player</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="card">
+        <header class="header">
+          <div>
+            <h1>Movie Player</h1>
+            <p class="sub">Custom controls, mpv rendering. The video plays in the mpv window.</p>
+          </div>
+          <div class="pill" id="connPill">Checking...</div>
+        </header>
+
+        <section class="grid">
+          <div class="panel">
+            <h2>Now Playing</h2>
+            <div class="kv">
+              <div class="k">File</div>
+              <div class="v mono" id="fileName">-</div>
+              <div class="k">Time</div>
+              <div class="v mono" id="timeText">-</div>
+              <div class="k">Volume</div>
+              <div class="v mono" id="volText">-</div>
+              <div class="k">Speed</div>
+              <div class="v mono" id="speedText">-</div>
+            </div>
+
+            <div class="row">
+              <button class="btn" id="btnToggle">Play/Pause</button>
+              <button class="btn ghost" id="btnBack">-10s</button>
+              <button class="btn ghost" id="btnFwd">+10s</button>
+              <button class="btn ghost" id="btnConnect">Connect</button>
+            </div>
+
+            <div class="sliderBlock">
+              <label class="label" for="timeline">Timeline</label>
+              <input id="timeline" type="range" min="0" max="1" step="0.1" value="0" />
+              <div class="hint mono" id="timelineHint">-</div>
+            </div>
+
+            <div class="row two">
+              <div class="sliderBlock">
+                <label class="label" for="volume">Volume</label>
+                <input id="volume" type="range" min="0" max="100" step="1" value="50" />
+              </div>
+              <div class="sliderBlock">
+                <label class="label" for="speed">Speed</label>
+                <input id="speed" type="range" min="0.25" max="3" step="0.05" value="1" />
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h2>Open File</h2>
+            <p class="sub tight">
+              Paste a local path (example: <span class="mono">D:\Videos\movie.mp4</span>) and click Open.
+            </p>
+            <div class="row">
+              <input class="input mono" id="openPath" placeholder="D:\\Videos\\movie.mp4" />
+              <button class="btn" id="btnOpen">Open</button>
+            </div>
+
+            <h2 class="mt">Status</h2>
+            <pre class="log mono" id="log">-</pre>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <span class="mono">Space</span> toggles, <span class="mono">Left/Right</span> seeks.
+        </footer>
+      </section>
+    </main>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
