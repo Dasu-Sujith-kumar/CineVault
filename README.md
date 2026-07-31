@@ -1,4 +1,4 @@
-# CineVault / movie-player
+# CineVault 
 
 A filesystem-first local media manager and MPV-backed desktop player (Tauri + React frontend, Rust backend) that indexes a local library, extracts metadata, matches with TMDB, and provides a desktop playback UI controlled via mpv JSON IPC.
 
@@ -173,12 +173,6 @@ cargo check         # run in repository root for Rust code health
 ## License
 (Choose & add a license file if you have one; otherwise add an appropriate license here, e.g. MIT.)
 
----
-
-## Try asking
-- "How do I run the scanner over /media/movies and persist to ./cinevault.db? Show the exact cargo command."
-- "Which frontend module handles the player state and what files implement the `usePlayer` hook?"
-- "Where in the Rust code is mpv spawned and the IPC handled (which file/module) — can you point to the function or file?"
 
 
 If you want, I can:
