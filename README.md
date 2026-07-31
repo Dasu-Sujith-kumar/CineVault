@@ -175,7 +175,4 @@ cargo check         # run in repository root for Rust code health
 
 
 
-If you want, I can:
-- Commit this README.md into the repository (I’ll need the repository target).
-- Produce a shorter README focused only on installation and dev commands.
-- Create CONTRIBUTING.md or a simple LICENSE file.
+
